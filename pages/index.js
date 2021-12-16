@@ -212,7 +212,7 @@ export default function Home() {
   return (
     <div className='relative'>
       <Settings setMenuIsOpen={setMenuIsOpen} menuIsOpen={menuIsOpen} />
-      <div className={`max-w-7xl mx-auto px-4 sm:px-6 ${menuIsOpen && 'blur'}`}>
+      <div className={`max-w-xl mx-auto px-4 sm:px-6 ${menuIsOpen && 'blur'}`}>
         <div className='flex justify-between items-center py-6 md:justify-start md:space-x-10'>
           <h1 className='font-customSerif text-4xl font-bold text-gray-900 left-0 top-0'>
             Alarme de <nobr>Feitiços do Zé</nobr>
