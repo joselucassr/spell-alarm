@@ -94,10 +94,7 @@ const Laner = ({ laneName, laners, sendTimes }) => {
       }));
       let startTime = Date.now();
 
-      let spellDuration =
-        thisLaner[`spell${pos}`] == 'teleport'
-          ? times.spells[thisLaner[`spell${pos}`]].duration[thisLaner.level - 1]
-          : times.spells[thisLaner[`spell${pos}`]].duration;
+      let spellDuration = times.spells[thisLaner[`spell${pos}`]].duration;
 
       if (thisLaner.hasIonian)
         spellDuration = spellDuration * (100 / (100 + times.cd.ionian.haste));
@@ -234,7 +231,7 @@ const Laner = ({ laneName, laners, sendTimes }) => {
           {thisLaner.name && thisLaner.name.toUpperCase()}
           {thisLaner.name === 'jg' && <span className='invisible'>A</span>}
         </div>
-        <div
+        {/* <div
           className={`flex items-center text-3xl font-light flex-1 font-nunito pl-2 ${
             thisLaner.spell1 == 'teleport' || thisLaner.spell2 == 'teleport'
               ? ''
@@ -262,7 +259,7 @@ const Laner = ({ laneName, laners, sendTimes }) => {
                 }));
             }}
           />
-        </div>
+        </div> */}
         <div className='flex space-x-4'>
           <div
             className='w-12 hover:cursor-pointer'
